@@ -1,0 +1,25 @@
+{
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "https://testfunc56022fa-fjbvd8dvchgud2c4.westus2-01.azurewebsites.net",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Access-Control-Allow-Headers": "*"
+  },
+  "routes": [
+    {
+      "route": "/api/*",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://testfunc56022fa-fjbvd8dvchgud2c4.westus2-01.azurewebsites.net",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+        "Access-Control-Allow-Headers": "*"
+      }
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "rewrite": "/unauthorized.html"
+    },
+    "404": {
+      "rewrite": "/404.html"
+    }
+  }
+}
