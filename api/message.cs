@@ -21,6 +21,6 @@ public class message
 
         var response = new { value = "Matt" };
 
-        return new OkObjectResult("response");
+        return new OkObjectResult(response);
     }
 }
