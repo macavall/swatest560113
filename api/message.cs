@@ -18,6 +18,9 @@ public class message
     public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult("Matt");
+
+        var response = new { value = "Matt" };
+
+        return new OkObjectResult("response");
     }
 }
