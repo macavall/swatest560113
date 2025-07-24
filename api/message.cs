@@ -24,23 +24,3 @@ public class message
         return new OkObjectResult(response);
     }
 }
-
-public class message2
-{
-    private readonly ILogger<message2> _logger;
-
-    public message2(ILogger<message2> logger)
-    {
-        _logger = logger;
-    }
-
-    [Function("message2")]
-    public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequest req)
-    {
-        _logger.LogInformation("C# HTTP trigger function processed a request.");
-
-        var response = new { value = "Thing2" };
-
-        return new OkObjectResult(response);
-    }
-}

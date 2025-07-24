@@ -12,15 +12,12 @@
     <main>
     <h1>Vanilla JavaScript App</h1>
     <p>Loading content from the API: <b id="name">...</b></p>
-    <p>Loading content from the API: <b id="name2">...</b></p>
     </main>
 
   <script>
       (async function() {
-          const { value } = await (await fetch(`/api/message`)).json();
+          const { value } = await (await fetch(`https://testfunc56022fa-fjbvd8dvchgud2c4.westus2-01.azurewebsites.net/api/message`)).json();
           document.querySelector('#name').textContent = value;
-          const { value2 } = await (await fetch(`/api/message2`)).json();
-          document.querySelector('#name2').textContent = value2;
       })();
   </script>
 </body>
